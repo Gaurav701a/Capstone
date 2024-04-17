@@ -1,0 +1,45 @@
+/* Define shades of white */
+.white1 { background-color: #FFFFFF; }
+.white2 { background-color: #F5F5F5; }
+.white3 { background-color: #E0E0E0; }
+.white4 { background-color: #CCCCCC; }
+.white5 { background-color: #B3B3B3; }
+
+/* Apply styles to form elements */
+form {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: #FFFFFF; /* Fallback */
+}
+
+.input-field {
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0;
+  border: none;
+  border-radius: 3px;
+  box-sizing: border-box;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 3px;
+  box-sizing: border-box;
+  background-color: #007bff; /* Blue color */
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+h2 {
+  text-align: center;
+}

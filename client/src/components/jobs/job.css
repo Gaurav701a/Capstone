@@ -1,0 +1,129 @@
+.price {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.price .items {
+  padding: 40px;
+  text-align: center;
+}
+.price h1 {
+  font-size: 50px;
+  margin: 20px 0;
+  color: #1eb2a6;
+}
+.price h1 span {
+  font-size: 20px;
+  margin-right: 5px;
+  color: #000;
+}
+.price p {
+  color: grey;
+  margin: 40px 0;
+}
+/*--------------faq-------------*/
+.faq .container {
+  max-width: 70%;
+  border-radius: 5px;
+}
+.faq .box {
+  background-color: #fff;
+  margin-bottom: 20px;
+}
+.faq button {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 15px 20px;
+}
+.faq h2 {
+  font-weight: 500;
+}
+.faq p {
+  padding: 20px;
+}
+.faq .accordion:hover {
+  background-color: #1eb2a6;
+  color: #fff;
+}
+
+/*--------------faq-------------*/
+
+.search-container {
+  display: flex;
+  /* grid-template-columns: repeat(4, 1fr); */
+
+  /* max-width: fit-content; */
+  align-items: center;
+  margin-bottom: 1rem;
+  justify-content: space-between;
+  display: flex;
+
+  gap: 10px;
+}
+
+.search-box {
+  width: 200px;
+}
+
+.search-box-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.search-label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.search-button {
+  margin-top: 0;
+  width: 100px;
+  padding: 0.75rem;
+  background-color: #4caf50;
+  color: #ffffff;
+  border: none;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.search-button:hover {
+  background-color: #45a049;
+}
+
+.experience-input {
+  width: 200px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+/* Adjustments for label */
+.exp-label {
+  margin-bottom: 6px;
+  display: block;
+  font-weight: bold;
+}
+
+.no-results-text {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.big-font {
+  font-size: 24px; /* Adjust font size as needed */
+  font-weight: bold; /* Optional: Adjust font weight as needed */
+  color: #333; /* Optional: Adjust text color as needed */
+}
+
+.tle{
+  margin-right: 3em;
+  margin-left: -1em;
+  padding: 0.2em 0.5em;
+  border: 1px solid black;
+  border-radius: 1em;
+}
