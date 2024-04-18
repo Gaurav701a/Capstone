@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useHistory } from "react-router-dom";
+import { useHistory, Link } from "react-router-dom";
 import {
   Box,
   Flex,
@@ -8,6 +8,7 @@ import {
   FormControl,
   FormLabel,
   ChakraProvider,
+  Spinner, // Import Spinner component
 } from "@chakra-ui/react";
 
 function LoginPage() {
@@ -16,6 +17,7 @@ function LoginPage() {
     userName: "",
     password: "",
   });
+  const [loading, setLoading] = useState(false); // State for loading
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -27,6 +29,7 @@ function LoginPage() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setLoading(true); // Start loading when submitting form
 
     try {
       const response = await fetch("http://localhost:4242/auth/login", {
@@ -51,6 +54,8 @@ function LoginPage() {
       }
     } catch (error) {
       console.error("Error logging in:", error);
+    } finally {
+      setLoading(false); // Stop loading regardless of success or failure
     }
   };
 
@@ -94,9 +99,18 @@ function LoginPage() {
                   onChange={handleChange}
                 />
               </FormControl>
-              <Button colorScheme="teal" width="full" mt={4} type="submit">
-                Login
+              <Button
+                colorScheme="teal"
+                width="full"
+                mt={4}
+                type="submit"
+                disabled={loading}
+              >
+                {loading ? <Spinner size="sm" color="white" /> : "Login"}
               </Button>
+              <Box mt={4} textAlign="center">
+                <Link to="/register">New user? Click here to register</Link>
+              </Box>
             </form>
           </Box>
         </Box>

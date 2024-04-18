@@ -18,7 +18,7 @@ const Hero = () => {
               your aspirations
             </p>
             <div className="button">
-              <button className="primary-btn">
+              <button to="/jobs" className="primary-btn">
                 GET STARTED NOW <i className="fa fa-long-arrow-alt-right"></i>
               </button>
             </div>
