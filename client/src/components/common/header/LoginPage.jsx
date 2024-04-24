@@ -32,7 +32,7 @@ function LoginPage() {
     setLoading(true); // Start loading when submitting form
 
     try {
-      const response = await fetch("http://localhost:4242/auth/login", {
+      const response = await fetch("/auth/login", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

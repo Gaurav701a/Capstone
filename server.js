@@ -2,6 +2,7 @@ const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
 const authRoutes = require("./routes/auth.js");
+const path = require("path");
 
 const app = express();
 
@@ -11,6 +12,17 @@ app.use(cors()); // Add this line to enable CORS
 
 // Routes
 app.use("/auth", authRoutes);
+
+// serving the frontend
+app.use(express.static(path.join(__dirname, "./client/build")));
+app.get("*", function (_, res) {
+  res.sendFile(
+    path.join(__dirname, "./client/build/index.html"),
+    function (err) {
+      res.status(500).send(err);
+    }
+  );
+});
 
 // Connect to MongoDB
 mongoose
